@@ -36,50 +36,51 @@ Check SANS page for useful tools
 
 ## Case Strategy
 
-Initial gathering
-Ask Questions
-Do Case Work
-Add more Questions
-Re-ask all questions
-Be more collaborative
+* Initial gathering
+* Ask Questions
+* Do Case Work
+* Add more Questions
+* Re-ask all questions
+* Be more collaborative
 
 ## MAC OS
 
-Browser History
-Downloads (quarantine)
-Extensions
-Files
-DNS Queries
-Connections.csv/network.csv
-Check surrounding events, before and after
+* Browser History
+* Downloads (quarantine)
+* Extensions
+* Files
+* Applications (Grep in root folder)
+* DNS Queries
+* Connections.csv/network.csv
+* Check surrounding events, before and after
 	• Use XSV for parsing
-Focus on Trace Folder
-Installation Evidence (plists), mounts
-Trace Folders (network, file, processes)
-ProcInfo (connections)
-Redsight
-Timelines (find pivot point)
-Lateral Movement - 
+* Focus on Trace Folder
+* Installation Evidence (plists), mounts
+* Trace Folders (network, file, processes)
+* ProcInfo (connections)
+* Redsight
+* Timelines (find pivot point)
+* Lateral Movement - 
 	• SSH
 	• ProcInfo (connections)
 	• Network (Trace)
 	• AppleScript (osaScript) - Regex (osascript\s.*kjhhxlhlkyga)
 		○ https://attack.mitre.org/techniques/T1155/
 	• SCP, RSYNC, and SFTP, FTP
- Network (Trace)
-LaunchDaemons
-LaunchAgents
-Cron/at jobs
-StartupItems
-Parse FSD events ( for file like ish)
-Exfil
+* Network (Trace)
+* LaunchDaemons
+* LaunchAgents
+* Cron/at jobs
+* StartupItems
+* Parse FSD events ( for file like ish)
+* Exfil
 	• Check sig
 	• Check bro
 	• Check conn
 
 
-LOGS that 
-Firewall Logs (systemProfile.spx and fw_opts.json)
+* LOGS that 
+* Firewall Logs (systemProfile.spx and fw_opts.json)
 
 http://nicoleibrahim.com/
 
