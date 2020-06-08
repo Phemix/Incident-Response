@@ -45,11 +45,14 @@ Check SANS page for useful tools
 
 ## MAC OS
 
+MAC OS
+
+* Check IP/domain name 
 * Browser History
 * Downloads (quarantine)
 * Extensions
 * Files
-* Applications (Grep in root folder)
+* Applications (grep in root folder)
 * DNS Queries
 * Connections.csv/network.csv
 * Check surrounding events, before and after
@@ -59,6 +62,8 @@ Check SANS page for useful tools
 * Trace Folders (network, file, processes)
 * ProcInfo (connections)
 * Redsight
+* activateSettings -newKeyboardContext (check for keyboard attach)
+* KeyboardSetupAssistant/KeyboardServiceAddedCallback (to search for Rubber Ducky)
 * Timelines (find pivot point)
 * Lateral Movement - 
 	• SSH
@@ -69,20 +74,35 @@ Check SANS page for useful tools
 	• SCP, RSYNC, and SFTP, FTP
 * Network (Trace)
 * LaunchDaemons
+* USB?
 * LaunchAgents
-* Cron/at jobs
+* Cron/at jobs (crontab -l)
 * StartupItems
 * Parse FSD events ( for file like ish)
 * Exfil
 	• Check sig
 	• Check bro
 	• Check conn
-
-
-* LOGS that 
 * Firewall Logs (systemProfile.spx and fw_opts.json)
+* ATMEL AVR (Manufacturer of Rubber Ducky)
+* Getting stumped? Do dynamic searches
+
+* Icloud Accounts
+raw_artifacts/libraryPrefs/Users/z0019w1/Library/Preferences/MobileMeAccounts.plist.json
+raw_artifacts/socialAccounts/z0019w1/Accounts4.sqlite db: 
+select * from zaccount;
+
 
 http://nicoleibrahim.com/
+
+
+## Docker Investigation 
+
+* Docker ps -a (show all containers)
+* Docker Inspect (show all docker config)
+* docker history bb2bb32a82b3 --no-trunc  (shows how image was built)
+* Docker container top container-id uid, pid, cmd (shows all processes in a running container)
+
 
 
 
