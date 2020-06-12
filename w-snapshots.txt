@@ -1,0 +1,9 @@
+2019-08-27T12:52:36Z
+W-snapshots:
+
+What happened (add little details):  malicious email was sent to a Target Member's inbox
+What is the alert source: FireEye EX
+Who was involved: Sender->support@dhl.com, Recipient -> Cheryl.Caffrey@target.com
+What time: 27 Aug 2019 06:48:47 CDT
+What was my response to the alert: 
+What was the containment/remediation actions:

@@ -1,0 +1,7 @@
+- Greenshot
+- XSV
+- CMDer
+- ShellCache
+- AMCache
+- Autoruns
+- BitVise

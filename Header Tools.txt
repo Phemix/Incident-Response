@@ -1,0 +1,14 @@
+Browser Header Notes
+- HSTS (Hypertext Strict Transport Security) forces the use of HTTPS and applies TOFU (Trust on First Use)
+ * max-age means insecure requests cannot be made till that time expires
+- HPKP (HTTP Public Key Pinning): Accepts valid certs and adheres to certain criteria, relies on TOFU, whitelist allowable certs for the domain
+ * Has parameters - Public-Key-Pins, pin-sha256, max-age; includeSubdomains
+- For browser compatibility, check caniuse.com
+- Content Security Policy (CSP) - determines what your site can run
+ * Can only load sites from HTTPS
+ * Operates like a whitelist
+ * can work report only (start points so stuff is not broken)
+ 
+- securityheaders.io can scan and give reports on a site
+- report-uri.io/home/analyze to analyze CSP pretty well
+- report-uri.io/home/generate can generate a CSP policy
