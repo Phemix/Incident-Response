@@ -1,7 +1,7 @@
 # MAC OS ARTIFACTS
 - Install History - /Library/Receipts/InstallHistory.plist
 - SIP (/System/Library/Sandbox/rootless.conf) shows directories covered by SIP
-- Logon Info - (last)
+- Logon Info - (last and w)
 - Proceses - Parent/Child relationship
 -FS Events (FileSystem Events)
  - lsof to list all network connections | grep -i listen/establish/TCP/UDP
@@ -40,4 +40,20 @@
  - Audit Logs (/var/audit)
  - Application Logs (/Library/Logs|Application Support/Logs)
  - User Logs (~/Library/Logs)
+ - wtmp.log - find out more later
  
+ 
+ # Lateral Movement
+  - Mostly through SSH (cand be seen with the 'w' and 'last' command
+  - Check if SMB is enabled - launchctl list | grep -i com.apple.smbd
+  - Show file sharing history
+    * log show --info --debug --predicate 'proessImagePath CONTAINS "tccd" AND eventMessage CONTAINS "/usr/sbin/smbd" AND NOT eventMessage CONTAINS "PID"'
+  - Determine if anyone connected to a SMB share hosted on MacOS
+      * log show --style json --info --debug --predicate 'eventMessage CONTAINS "com.apple.smbd"' --last 7d
+  - History of bluetooth devices
+      * * log show --style json --info --debug --predicate 'eventMessage CONTAINS "isFirstPairing"' --last 7d
+  - Files sent to OS using BT devices (count will always be 1)
+     * log show --info debug -predicate 'processImagepath CONTAINS "bluetoothaudiod" AND eventMessage CONTAINS "incoming:1"' -last 2h
+  - Files sent from Mac OS using BT
+    * log show --info debug -predicate '(processImagepath CONTAINS "bluetoothaudiod" eventMessage CONTAINS "outgoing") OR (processImagepath CONTAINS "bluetoothaudiod" eventMessage CONTAINS "incoming:0")' -last 2h
+     
