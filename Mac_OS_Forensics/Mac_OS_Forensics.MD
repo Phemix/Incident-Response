@@ -2,7 +2,10 @@
 - Install History - /Library/Receipts/InstallHistory.plist
 - SIP (/System/Library/Sandbox/rootless.conf) shows directories covered by SIP
 - Logon Info - (last and w)
-- Proceses - Parent/Child relationship
+- Proceses - Parent/Child relationship 
+    * (ps and ps_start) 
+    * True_tree concept (find out more)
+    * Find more about IPC
 -FS Events (FileSystem Events)
  - lsof to list all network connections | grep -i listen/establish/TCP/UDP
  - Recent MS Office activity (~/Library/Containers/com.microsoft.Excel|Word|PowerPoint.plist OR
