@@ -1,9 +1,11 @@
 # MAC OS ARTIFACTS
 - Install History - /Library/Receipts/InstallHistory.plist
 - SIP (/System/Library/Sandbox/rootless.conf) shows directories covered by SIP
+- Logon Info - (last)
+- Proceses - Parent/Child relationship
 -FS Events (FileSystem Events)
  - lsof to list all network connections | grep -i listen/establish/TCP/UDP
- - Recnt MS Office activity (~/Library/Containers/com.microsoft.Excel|Word|PowerPoint.plist OR
+ - Recent MS Office activity (~/Library/Containers/com.microsoft.Excel|Word|PowerPoint.plist OR
      ~/Library/Containers/com.microsoft.Excel|Word|PowerPoint. securebookmarksplist
  - Startup Items (/Library/StartupItems) - grep "/Library/StartupItems" root.csv | grep -v cmd_output | sort
  - Event Monitor Daemon (etc/emon.d/edomnd.plist and /etc/emon.d/rules
@@ -16,6 +18,9 @@
   * ls /Applications/OneDrive.app/Contents/Library/LoginItems/
  - Cron/AT jobs
  - Kernel/System Extensions (/Library/StagedExtensions | /System/Library/Extensions/)
+ - Aplication FIrewall
+ - Application Sandboxing- They are usually in a directory called 'Containers' (find . -name Containers)
+ - AppTranslocation (Apple's mechanism to prevent damage an app can do)
  
  * LaunchAgents/Daemons  
  - ~/Library/LaunchAgents - user owned
