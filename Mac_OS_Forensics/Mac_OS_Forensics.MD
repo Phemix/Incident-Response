@@ -33,4 +33,11 @@
 
 
 # Logs
- - log show -predicate 'eventMessage contains "/Volumes"'
+ - log show -predicate 'eventMessage contains "/Volumes"' shows Volumes
+ - System Logs (/var/log)
+ - Apple System Logs (/var/log/asl|Diagnostics|powermanagement
+ - Unified Logs (var/db/diagnostics) | 'log show' --info | --debug 
+ - Audit Logs (/var/audit)
+ - Application Logs (/Library/Logs|Application Support/Logs)
+ - User Logs (~/Library/Logs)
+ 
